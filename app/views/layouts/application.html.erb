@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PetSearch</title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", "http://www.petstablished.com/assets/signup/all.css" %>
+  <%= javascript_include_tag "application", "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div id="wrapper">
+				<header id="header">
+					<div class="header-frame">
+						<div class="header-info">
+							<strong class="logo"><a href="#">Petstablished</a></strong>
+						</div>
+					</div>
+				</header>
+			</div>
+		</div>
+	<%= yield %>
+		<footer id="footer">
+			<div class="container">
+				<div class="area">
+					<div class="link">Personalized customer and tech support - always available when you need us</div>
+				</div>
+				<ul class="info list-unstyled">
+					<li>Copyright &copy; 2014 <a href="#">Petstablished</a>. All Rights Reserved</li>
+					<li>Contact: <a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#112;&#101;&#116;&#115;&#116;&#097;&#098;&#108;&#105;&#115;&#104;&#101;&#100;&#046;&#099;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#112;&#101;&#116;&#115;&#116;&#097;&#098;&#108;&#105;&#115;&#104;&#101;&#100;&#046;&#099;&#111;&#109;</a></li>
+					<li>Phone: <a href="tel:8556843184" class="tel">855.684.3184</a></li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

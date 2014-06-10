@@ -1,0 +1,75 @@
+
+	<div id="main">
+		<div class="row">
+			<div class="title-area">
+				<h1>Pets</h1>
+				<h6 style="border:1px solid #ccc; border-radius:5px; padding:5px;"><%= @pets.size %> total pets found</h6>
+			</div>
+		</div>
+	</div>
+	<div style="margin:0 auto; width:90%;">
+	<div id="animallist" class="row animal-list" style="padding-top:20px; background-color:white;">
+		<div id="pagination">
+			<ul class="pagination"></ul>
+		</div>
+		<div id="sort-table">
+			<div class="title">
+				<p>Sort By:</p>
+			</div>
+			<div class="sortby">
+				<input type="radio" class="sort" name="sorting" data-sort="species">
+				<label>Species</label>
+			</div>
+			<div class="sortby">
+				<input type="radio" class="sort" name="sorting" data-sort="age">
+				<label>Age</label>
+			</div>
+			<div class="sortby">
+				<input type="radio" class="sort" name="sorting" data-sort="size">
+				<label>Size</label>
+			</div>
+		</div>
+		<ul class="list">
+		<% @pets.each do |pet| %>
+			<li>
+				<div class="col-md-5 pet-info1" >
+					<div class="float-l pet-pic1">
+						<img src="http://placehold.it/100X125" alt="adopt <%= pet.name %> the <%= pet.species %> at <%= pet.organization_name %>">
+					</div>
+					<div class="float-l pet-details1">
+						<h2 style="margin:5px;"><%= pet.name %> <span><%= link_to 'View Profile', pet %></span></h2>
+						<p><span class="age"><%= pet.age %></span> |
+						<% if pet.gender == "F" %>
+							Female
+						<% else %>
+							Male
+						<% end %>
+						| <%= pet.primary_breed %> - <%= pet.secondary_breed %></p>
+						<p><span class="size"><% if pet.size == "S" %>
+								Small
+							<% end %></span> | 
+							<%= pet.color %> | 
+							<span class="species"><%= pet.species %></span>
+							
+							 | <%= pet.contact_city %>, <%= pet.contact_state %></p>
+						<p><strong><%= pet.organization_name %></strong></p> 
+					</div>
+					<div class="clearfix"></div> 
+				</div>
+			</li>
+		<% end %>
+		</ul>
+	</div>
+</div>
+<script>
+var options = {
+  valueNames: [ 'age', 'size', 'species' ],
+  listClass: 'list',
+  page: 10,
+  plugins: [ ListPagination({}) ]
+};
+
+var userList = new List('animallist', options);
+
+</script>
+<%= link_to 'New Pet', new_pet_path %>

@@ -1,0 +1,1 @@
+'PetSearch' is a dummy Pet information management application. This will be used for petstablished.com front-end coding challenge 

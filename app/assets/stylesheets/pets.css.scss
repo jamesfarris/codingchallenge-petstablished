@@ -1,0 +1,161 @@
+// Place all the styles related to the Pets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#header {
+	background: url('http://petstablished.com/assets/signup/img.jpg') no-repeat 50% 50%;
+}
+
+.animal-list {
+	background-color:white;
+	paddiing:10px;
+	ul {
+		padding:0;
+		margin:0;
+		li {
+			list-style-type:none;
+			margin:0;
+			padding:0;
+		}
+	}
+}
+
+h2 span {
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+
+h2 span a, h1 span a, span a.bttn {
+	padding:5px 10px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	font-size:.7em;
+	&:hover {
+		text-decoration:none;
+		background-color:#0072bc;
+		color:white;
+		border-color:#0072bc;
+	}
+}
+a.bttn {
+	text-align:right;
+}
+.share-container {
+	width:400px;
+	margin-bottom:10px;
+	ul.social {
+		li {
+			display:inline-block;
+			padding:5px;
+			border-radius:8px;
+			width:120px;
+			.social-text {
+				position:relative;
+				top:-7px;
+				color:#ffffff;
+			}
+			a {
+				display:inline-block;
+				text-decoration:none;
+				width:115px;
+			}
+		}
+		.facebook {
+			background-color:#4e69a2;
+		}
+		.twitter {
+			background-color:#55acee;
+		}
+		.pinterest {
+			background-color:red;
+		}
+	}
+}
+.float-l {
+	float:left;
+}
+.pet-pic1 {
+	margin: 15px 5px;
+}
+.pet-details1 {
+	margin: 5px;
+}
+.social {
+	background-color:white;
+	padding:5px;
+}
+div#pagination {
+	text-align:center;
+}
+#sort-table {
+	text-align:center;
+	margin-right:10px;
+	div {
+		display:inline-block;
+		margin:5px;
+	}
+	.sortby {
+		position:relative;
+		bottom:5px;
+		label {
+			position:relative;
+			top:5px;
+		}
+	}
+}
+.pet-pic {
+	width:250px;
+}
+.pet-info {
+	h1 {
+	margin-top:10px;
+	}
+}
+.pet-info, .pet-pic, .pet-info1, .pet-pic1 {
+	float:left;
+	
+}
+.pet-bio-info {
+	p {
+		font-size:1.1em;
+	}
+	padding:10px;
+	background-color:#cbdde8;
+	.pet-bio-inside {
+		float:left;
+		margin-right:15px;
+	}
+}
+.details {
+	width:100%;
+	margin:0 auto;
+	table {
+		width:180px;
+		caption {
+			padding:10px;
+			background-color:#0072bc;
+			color:white;
+			font-size:1.4em;
+		}
+		tr {
+			td {
+				height:55px;
+				padding:8px;
+			}
+		}
+		tr > td:last-child {
+			font-weight: bold;
+			text-align:right;
+		}
+	}
+}
+@media all and (max-width: 852px) {
+  h2 {
+  	span {
+  		position:relative;
+  		top:0;
+  		right:0;
+  	}
+  }
+}
